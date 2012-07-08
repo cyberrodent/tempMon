@@ -1,15 +1,22 @@
 TempMon
 =======
-Some quick scripting to help deal with running Ubuntu linux on a Mac Mini where the fan control is fubarred out of the box.
+Some quick scripting to help deal with running Ubuntu linux on a Mac Mini where the fan control is fubarred out of the box.  Requires the applesmc kernel module
+to be activated and lm-sensors installed. Uses the `sensors` command. http://lm-sensors.org/wiki/man/sensors. 
+
+There are other solutions available that are probably more widely used, tested and supported.
+ - http://stargate.solsys.org/mod.php?mod=faq&op=extlist&topicid=27&expand=yes#118
+ - http://mac.linux.be/content/fan-control-script-ubuntu-prevent-overheating
+
+This is a problem with "old" hardware and I chose to hack together a fix myself. Use this software at your own risk.
 
 bin
 ---
-These scripts can be used to directly set the fan speed.
+These scripts can be used to directly set the fan speed by writing values to the /sys fs.
 
 TempMon2.rb
 -----------
 I run this via cron to check the various temprature sensors, squirt the temp readings into graphite, and if the temp passes certain thressholds, spin the fan
-faster or slower.
+faster or slower.  
 
 Tempmon.rb
 ----------
@@ -17,6 +24,7 @@ Earlier simpler version of TempMon2.rb
 
 raw
 ---
+This is what I get back from sensors and informed how I approached parsing.
 <pre>
 ➜  ~  sensors -u
 coretemp-isa-0000
