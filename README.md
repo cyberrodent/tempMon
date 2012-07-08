@@ -1,3 +1,22 @@
+TempMon
+=======
+Some quick scripting to help deal with running Ubuntu linux on a Mac Mini where the fan control is fubarred out of the box.
+
+bin
+---
+These scripts can be used to directly set the fan speed.
+
+TempMon2.rb
+-----------
+I run this via cron to check the various temprature sensors, squirt the temp readings into graphite, and if the temp passes certain thressholds, spin the fan
+faster or slower.
+
+Tempmon.rb
+----------
+Earlier simpler version of TempMon2.rb
+
+raw
+---
 <pre>
 ➜  ~  sensors -u
 coretemp-isa-0000
