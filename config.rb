@@ -11,13 +11,13 @@ class Config
     MetricKey = "macmini.sensors"
 
     Statsd = {
-        "host" =>  "192.168.1.200",
-        "port" => 8125
+        :host =>  "192.168.1.200",
+        :port => 8125
     }
 
     Graphite = {
         :host => "192.168.1.200",
-        :port => 20003
+        :port => 2003
     }
 
 end

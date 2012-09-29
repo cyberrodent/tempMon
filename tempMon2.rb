@@ -27,7 +27,7 @@ class TempMon
         date = Time.now.to_i
         value = val.to_i
         puts  "#{self.graphite_key}.#{key} #{val} #{date} | nc #{self.statsHost} #{self.graphitePort} "
-        %x{echo  "#{self.graphite_key}.#{key} #{val} #{date}" | nc #{self.statsHost} #{self.graphitePort} }
+        %x{echo  "#{self.graphite_key}.#{key} #{value} #{date}" | nc #{self.statsHost} #{self.graphitePort} }
 
     end
 

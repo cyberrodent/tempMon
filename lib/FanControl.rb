@@ -16,6 +16,8 @@ class FanControl
     end
 
     def getCurrent()
-        `cat #{Device_Path}/fan1_output`
+        c =`cat #{Device_Path}/fan1_output`
+        puts c
+        return c
     end
 end

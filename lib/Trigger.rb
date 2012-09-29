@@ -1,9 +1,9 @@
 class Trigger
-    @@host = ''
-    @@port = ''
+    @host = ''
+    @port = ''
     def initialize(config)
-        @@host = config[:host]
-        @@port = config[:port]
+        @host = config[:host]
+        @port = config[:port]
     end
 
     def trigger(key, val)
