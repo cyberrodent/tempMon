@@ -124,10 +124,8 @@ if __FILE__ == $0
         # puts "JUST RIGHT"
         fc.fan_medium()
         t.toGraphite("fan.medium", 1)
-
     end
 
-    # sleep(1)
     current_speed = fc.get_current().strip!
     t.toGraphite("fan.speed", current_speed)
 end
